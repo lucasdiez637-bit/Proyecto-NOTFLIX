@@ -81,6 +81,21 @@ body {
   display: block;
   object-fit: cover;
 }
+
+.movie-row .movie-card2 {
+  flex: 0 0 auto;
+  min-width: 0; 
+  scroll-snap-align: start;
+}
+
+.movie-card2 img {
+  width: 280px;
+  height: 340px;
+  object-fit: cover; 
+  display: block;
+  object-fit: cover;
+}
+
 .movie-row::-webkit-scrollbar {
   height: 8px;
 }
