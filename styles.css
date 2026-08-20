@@ -45,3 +45,74 @@ body {
     border-left: 5px solid #e50914;
     border-radius: 5px;
 }
+
+.carousel-item img {
+  height: 60vh;
+  width: 100%;
+  object-fit: contain;
+  background-color:transparent; 
+}
+
+.carousel-caption h3{
+  background-color: transparent;
+}
+
+.movie-row {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  padding: 4px;
+  scrollbar-width: thin; 
+  scrollbar-color: #6b21a8 transparent;
+}
+
+.movie-row .movie-card {
+  flex: 0 0 auto;
+  min-width: 0; 
+  scroll-snap-align: start;
+}
+
+.movie-card img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover; 
+  display: block;
+  object-fit: cover;
+}
+.movie-row::-webkit-scrollbar {
+  height: 8px;
+}
+
+.movie-row::-webkit-scrollbar-thumb {
+  background-color: #6b21a8;
+  border-radius: 4px;
+}
+
+.chat-bubble-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.chat-bubble {
+  position: absolute;
+  top: 120%;
+  left: 0;
+  background: #1f1f1f;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 12px;
+  width: 200px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease;
+  z-index: 10;
+}
+
+.chat-bubble-wrapper:hover .chat-bubble,
+.chat-bubble-wrapper:focus-within .chat-bubble {
+  opacity: 1;
+  visibility: visible;
+}
