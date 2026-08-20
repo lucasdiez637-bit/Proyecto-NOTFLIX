@@ -116,3 +116,17 @@ body {
   opacity: 1;
   visibility: visible;
 }
+
+.banner-suscripcion {
+  background: linear-gradient(90deg, #6b21a8, #2b0a4d);
+  color: white;
+}
+
+.banner-suscripcion .btn-light {
+  color: #6b21a8;
+  transition: transform 0.2s ease;
+}
+
+.banner-suscripcion .btn-light:hover {
+  transform: scale(1.05);
+}
