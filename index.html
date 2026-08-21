@@ -1,317 +1,662 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>NøTFLIX</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
-  <link rel="stylesheet" href="styles.css" />
-</head>
+    <title>NøTFLIX</title>
 
-<body>
-  <nav class="navbar navbar-dark navbar-expand-lg ">
-    <div class="container-fluid">
-      <span class="navbar-brand">NøTFLIX</span>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
-        aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarScroll">
-        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Categorias
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#accion">Accion</a></li>
-              <li><a class="dropdown-item" href="#comedia">Comedia</a></li>
-              <li><a class="dropdown-item" href="#drama">Drama</a></li>
-              <li><a class="dropdown-item" href="#terror">Terror</a></li>
-            </ul>
-          </li>
-        </ul>
-        <form class="d-flex flex-nowrap" role="search">
-          <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search" minlength="5"
-            maxlength="30" />
-          <button class="btn btn-outline-light flex-shrink-0 me-2" type="button" data-bs-toggle="modal"
-            data-bs-target="#loginModal">Iniciar Sesion</button>
-          <a href="pages/suscripciones.html" class="btn btn-outline-light flex-shrink-0">
-            Suscribirme
-          </a>
-        </form>
-      </div>
-    </div>
-  </nav>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
 
-  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content bg-dark text-white">
-        <div class="modal-header border-secondary">
-          <h5 class="modal-title" id="loginModalLabel">Iniciar sesión</h5>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-          <form action="Error404/error404.html">
-            <div class="mb-3">
-              <label for="loginEmail" class="form-label">Email:</label>
-              <input type="email" class="form-control" id="loginEmail" required minlength="5" maxlength="35" placeholder="algo@gmail.com">
-            </div>
-            <div class="mb-3">
-              <label for="loginPassword" class="form-label">Contraseña:</label>
-              <input type="password" class="form-control" id="loginPassword" required minlength="5" maxlength="15">
-            </div>
-            <button type="submit" class="btn btn-primary w-100">Ingresar</button>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-dark navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">NøTFLIX</a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarScroll"
+          aria-controls="navbarScroll"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarScroll">
+          <ul
+            class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
+            style="--bs-scroll-height: 100px"
+          >
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">
+                Inicio
+              </a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Categorias
+              </a>
+
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#">Accion</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Comedia</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Ciencia Ficcion</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Novelas</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+
+          <form class="d-flex flex-nowrap" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Buscar"
+              aria-label="Buscar"
+            />
+
+            <button
+              class="btn btn-outline-light flex-shrink-0 me-2"
+              type="submit"
+            >
+              Iniciar Sesion
+            </button>
+
+            <button class="btn btn-outline-light flex-shrink-0" type="submit">
+              Suscribirme
+            </button>
           </form>
         </div>
       </div>
-    </div>
-  </div>
+    </nav>
 
-  <div id="carouselExampleCaptions" class="carousel slide">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-        aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-        aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-        aria-label="Slide 3"></button>
-    </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="Assets/cap america.jpg" class="d-block w-100" alt="...">
-        <div class="carousel-caption d-none d-md-block">
-          <h3 class="transparent text-white p-1">Avengers: Era de ultron</h3>
-          <button type="button" class="btn btn-danger" disabled>Ver Pelicula</button>
+    <!-- CAROUSEL DESTACADO -->
+    <div id="carouselExampleCaptions" class="carousel slide">
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+
+      <div class="carousel-inner">
+        <!-- SLIDE 1 -->
+        <div class="carousel-item active">
+          <img
+            src="Assets/cap america.jpg"
+            class="d-block w-100"
+            alt="Avengers Era de Ultron"
+          />
+
+          <div class="carousel-caption d-none d-md-block">
+            <h3 class="transparent text-white p-1">Avengers: Era de Ultron</h3>
+
+            <button type="button" class="btn btn-danger" disabled>
+              Ver Pelicula
+            </button>
+          </div>
+        </div>
+
+        <!-- SLIDE 2 -->
+        <div class="carousel-item">
+          <img
+            src="Assets/wallpapersden.com_avengers-infinity-war-official-poster_1920x1080.jpg"
+            class="d-block w-100"
+            alt="Avengers Infinity War"
+          />
+
+          <div class="carousel-caption d-none d-md-block">
+            <h3 class="transparent text-white p-1">Avengers: Infinity War</h3>
+
+            <button type="button" class="btn btn-danger" disabled>
+              Ver Pelicula
+            </button>
+          </div>
+        </div>
+
+        <!-- SLIDE 3 -->
+        <div class="carousel-item">
+          <img
+            src="Assets/484605.jpg"
+            class="d-block w-100"
+            alt="Doctor House"
+          />
+
+          <div class="carousel-caption d-none d-md-block">
+            <h3 class="transparent text-white p-1">
+              Doctor House: Todas las temporadas
+            </h3>
+
+            <button type="button" class="btn btn-danger" disabled>
+              Ver Serie
+            </button>
+          </div>
         </div>
       </div>
-      <div class="carousel-item">
-        <img src="Assets/wallpapersden.com_avengers-infinity-war-official-poster_1920x1080.jpg" class="d-block w-100"
-          alt="...">
-        <div class="carousel-caption d-none d-md-block">
-          <h3 class="transparent text-white p-1">Avengers: Infinity War</h3>
-          <button type="button" class="btn btn-danger" disabled>Ver Pelicula</button>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img src="Assets/484605.jpg" class="d-block w-100" alt="...">
-        <div class="carousel-caption d-none d-md-block">
-          <h3 class="transparent text-white p-1">Doctor House: Todas las temporadas</h3>
-          <button type="button" class="btn btn-danger" disabled>Ver Serie</button>
-        </div>
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
-  <div class="container my-4">
-    <div class="d-flex align-items-center mb-3 gap-3">
-      <h2 class="titulo-seccion mb-0">Sugeridas para vos</h2>
-      <span class="chat-bubble-wrapper">
-        <button type="button" class="btn btn-sm btn-outline-light rounded-circle">?</button>
-        <div class="chat-bubble">
-          Mantené <strong>Shift</strong> + scroll para deslizar las filas.
-        </div>
-      </span>
-    </div>
-    <div class="movie-row">
-      <div class="card border-0 bg-transparent movie-card">
-        <img src="Assets/kpoprecomendados.jpg" class="card-img rounded" alt="Película 1">
-      </div>
-      <div class="card border-0 bg-transparent movie-card">
-        <img src="Assets/war machine.jpg" class="card-img rounded" alt="Película 2">
-      </div>
-      <div class="card border-0 bg-transparent movie-card">
-        <img src="Assets/office romance.jpg" class="card-img rounded" alt="Película 1">
-      </div>
-      <div class="card border-0 bg-transparent movie-card">
-        <img src="Assets/on my block 1.jpg" class="card-img rounded" alt="Película 1">
-      </div>
-      <div class="card border-0 bg-transparent movie-card">
-        <img src="Assets/bastardos 1.jpg" class="card-img rounded" alt="Película 1">
-      </div>
-      <div class="card border-0 bg-transparent movie-card">
-        <img src="Assets/recomendados 1.jpg" class="card-img rounded" alt="Película 1">
-      </div>
-      <div class="card border-0 bg-transparent movie-card">
-        <img src="Assets/matrix aniversary.jpg" class="card-img rounded" alt="Película 1">
-      </div>
-      <div class="card border-0 bg-transparent movie-card">
-        <img src="Assets/ricardo y mortadela.jpg" class="card-img rounded" alt="Película 1">
-      </div>
+
+      <!-- CONTROLES -->
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+
+        <span class="visually-hidden"> Previous </span>
+      </button>
+
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+
+        <span class="visually-hidden"> Next </span>
+      </button>
     </div>
 
+    <!-- SUGERIDAS -->
+    <section class="container my-4">
+      <div class="d-flex align-items-center mb-3 gap-3">
+        <h2 class="titulo-seccion mb-0">Sugeridas para vos</h2>
 
+        <span class="chat-bubble-wrapper">
+          <button
+            type="button"
+            class="btn btn-sm btn-outline-light rounded-circle"
+          >
+            ?
+          </button>
 
+          <div class="chat-bubble">
+            Mantené <strong>Shift</strong> + scroll para deslizar las filas.
+          </div>
+        </span>
+      </div>
+
+      <div class="movie-row">
+        <div class="card border-0 bg-transparent movie-card">
+          <img
+            src="Assets/kpoprecomendados.jpg"
+            class="card-img rounded"
+            alt="Película recomendada"
+          />
+        </div>
+
+        <div class="card border-0 bg-transparent movie-card">
+          <img
+            src="Assets/war machine.jpg"
+            class="card-img rounded"
+            alt="War Machine"
+          />
+        </div>
+
+        <div class="card border-0 bg-transparent movie-card">
+          <img
+            src="Assets/office romance.jpg"
+            class="card-img rounded"
+            alt="Office Romance"
+          />
+        </div>
+
+        <div class="card border-0 bg-transparent movie-card">
+          <img
+            src="Assets/on my block 1.jpg"
+            class="card-img rounded"
+            alt="On My Block"
+          />
+        </div>
+
+        <div class="card border-0 bg-transparent movie-card">
+          <img
+            src="Assets/bastardos 1.jpg"
+            class="card-img rounded"
+            alt="Bastardos sin gloria"
+          />
+        </div>
+
+        <div class="card border-0 bg-transparent movie-card">
+          <img
+            src="Assets/recomendados 1.jpg"
+            class="card-img rounded"
+            alt="Película recomendada"
+          />
+        </div>
+
+        <div class="card border-0 bg-transparent movie-card">
+          <img
+            src="Assets/matrix aniversary.jpg"
+            class="card-img rounded"
+            alt="Matrix"
+          />
+        </div>
+
+        <div class="card border-0 bg-transparent movie-card">
+          <img
+            src="Assets/ricardo y mortadela.jpg"
+            class="card-img rounded"
+            alt="Rick y Morty"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- BANNER DE SUSCRIPCION -->
     <div class="container my-4">
-      <div class="p-4 rounded d-flex justify-content-between align-items-center flex-wrap gap-3 banner-suscripcion">
+      <div
+        class="p-4 rounded d-flex justify-content-between align-items-center flex-wrap gap-3 banner-suscripcion"
+      >
         <div>
           <h3 class="fw-bold mb-1">Suscribite y disfrutá sin límites</h3>
-          <p class="mb-0">Accedé a todo el catálogo de películas y series desde $0/mes.</p>
+
+          <p class="mb-0">
+            Accedé a todo el catálogo de películas y series desde $0/mes.
+          </p>
         </div>
-        <a href="suscripcion.html" class="btn btn-light fw-bold px-4 py-2">Ver planes</a>
+
+        <a href="suscripcion.html" class="btn btn-light fw-bold px-4 py-2">
+          Ver planes
+        </a>
       </div>
     </div>
 
-</div>
-<section class="container my-4">
- <div class="d-flex align-items-center mb-3 gap-3">
-  <h2 class="titulo-seccion mb-0">Accion</h2>
-  <span class="chat-bubble-wrapper">
-    <button type="button" class="btn btn-sm btn-outline-light rounded-circle">?</button>
-    <div class="chat-bubble">
-      Mantené <strong>Shift</strong> + scroll para deslizar las filas.
-    </div>
-  </span>
-</div>
-  <div class="movie-row">
-    <div class="card border-0 bg-transparent movie-card">
-      <img src="Assets/bastardos 1.jpg" class="card-img rounded" alt="Bastardos sin gloria">
-    </div>
-    <div class="card border-0 bg-transparent movie-card">
-      <img src="Categoria Accion/accion 8.jpg" class="card-img rounded" alt="Tomb raider">
-    </div>
-    <div class="card border-0 bg-transparent movie-card">
-      <img src="Assets/Batman-910896570-large.jpg" class="card-img rounded" alt="Batman">
-    </div>
-    <div class="card border-0 bg-transparent movie-card">
-      <img src="Categoria Accion/accion 4.jpg" class="card-img rounded" alt="los Vengadores">
-    </div>
-    <div class="card border-0 bg-transparent movie-card">
-      <img src="Categoria Accion/accion 5.jpg" class="card-img rounded" alt="thunderbolts">
-    </div>
-    <div class="card border-0 bg-transparent movie-card">
-      <img src="Categoria Accion/accion 6.jpg" class="card-img rounded" alt="Mad max">
-    </div>
-    <div class="card border-0 bg-transparent movie-card">
-      <img src="Categoria Accion/accion 7.avif" class="card-img rounded" alt="Spenser">
-    </div>
-    <div class="card border-0 bg-transparent movie-card">
-      <img src="Assets/matrix aniversary.jpg" class="card-img rounded" alt="Matrix">
-    </div>
-  </div>
-  <section class="container my-4">
- <div class="d-flex align-items-center mb-3 gap-3">
-  <h2 class="titulo-seccion mb-0">Comedia</h2>
-  <span class="chat-bubble-wrapper">
-    <button type="button" class="btn btn-sm btn-outline-light rounded-circle">?</button>
-    <div class="chat-bubble">
-      Mantené <strong>Shift</strong> + scroll para deslizar las filas.
-    </div>
-  </span>
-</div>
-  <div class="movie-row">
-    <div class="card border-0 bg-transparent movie-card">
-      <img src="Comedia/comedia 1.jpg" class="card-img rounded" alt="proyecto X">
-    </div>
-    <div class="card border-0 bg-transparent movie-card">
-      <img src="Comedia/comedia 2.avif" class="card-img rounded" alt="Big Momma">
-    </div>
-    <div class="card border-0 bg-transparent movie-card">
-      <img src="Comedia/comedia 4.webp" class="card-img rounded" alt="This is the end">
-    </div>
-    <div class="card border-0 bg-transparent movie-card">
-      <img src="Comedia/comedia 5.webp" class="card-img rounded" alt="Scary movie">
-    </div>
-    <div class="card border-0 bg-transparent movie-card">
-      <img src="Comedia/COMEDIA 7.png" class="card-img rounded" alt="The Big Bang theory">
-    </div>
-    <div class="card border-0 bg-transparent movie-card">
-      <img src="Comedia/comedia 14.jpg" class="card-img rounded" alt="The ridiculous 6">
-    </div>
-    <div class="card border-0 bg-transparent movie-card">
-      <img src="Comedia/comedia 15.webp" class="card-img rounded" alt="Scooby Doo">
-    </div>
-    <div class="card border-0 bg-transparent movie-card">
-      <img src="Comedia/comedia 12.jpg" class="card-img rounded" alt="American Pie">
-    </div>
-  </div>
+    <!-- ACCION -->
+    <section class="container my-4">
+      <div class="d-flex align-items-center mb-3 gap-3">
+        <h2 class="titulo-seccion mb-0">Accion</h2>
 
-  <section class="container my-4">
- <div class="d-flex align-items-center mb-3 gap-3">
-  <h2 class="titulo-seccion mb-0">Ciencia Ficcion</h2>
-  <span class="chat-bubble-wrapper">
-    <button type="button" class="btn btn-sm btn-outline-light rounded-circle">?</button>
-    <div class="chat-bubble">
-      Mantené <strong>Shift</strong> + scroll para deslizar las filas.
-    </div>
-  </span>
-</div>
-  <div class="movie-row">
-    <div class="card border-0 bg-transparent movie-card">
-      <img src="ciencia ficcion/cf1.jpg" class="card-img rounded" alt="Interestelar">
-    </div>
-    <div class="card border-0 bg-transparent movie-card">
-      <img src="ciencia ficcion/cf2.jpg" class="card-img rounded" alt="Volver al futuro">
-    </div>
-    <div class="card border-0 bg-transparent movie-card">
-      <img src="ciencia ficcion/cf3.avif" class="card-img rounded" alt="Star Wars">
-    </div>
-    <div class="card border-0 bg-transparent movie-card">
-      <img src="ciencia ficcion/cf4.jpg" class="card-img rounded" alt="E.T.">
-    </div>
-    <div class="card border-0 bg-transparent movie-card">
-      <img src="ciencia ficcion/cf5.jpg" class="card-img rounded" alt="Limitless">
-    </div>
-    <div class="card border-0 bg-transparent movie-card">
-      <img src="ciencia ficcion/cf6.jpg" class="card-img rounded" alt="Jurassic World: Renace">
-    </div>
-    <div class="card border-0 bg-transparent movie-card">
-      <img src="ciencia ficcion/cf7.jpg" class="card-img rounded" alt="Terminator">
-    </div>
-    <div class="card border-0 bg-transparent movie-card">
-      <img src="ciencia ficcion/cf8.jpg" class="card-img rounded" alt="Avatar">
-    </div>
-  </div>
+        <span class="chat-bubble-wrapper">
+          <button
+            type="button"
+            class="btn btn-sm btn-outline-light rounded-circle"
+          >
+            ?
+          </button>
 
- <section class="container my-4">
- <div class="d-flex align-items-center mb-3 gap-3">
-  <h2 class="titulo-seccion mb-0">Terror</h2>
-  <span class="chat-bubble-wrapper">
-    <button type="button" class="btn btn-sm btn-outline-light rounded-circle">?</button>
-    <div class="chat-bubble">
-      Mantené <strong>Shift</strong> + scroll para deslizar las filas.
-    </div>
-  </span>
-</div>
-  <div class="movie-row">
-    <div class="card border-0 bg-transparent movie-card">
-      <img src="Terror/terror 1.webp" class="card-img rounded" alt="Scream">
-    </div>
-    <div class="card border-0 bg-transparent movie-card">
-      <img src="Terror/terror 2.webp" class="card-img rounded" alt="El conjuro">
-    </div>
-    <div class="card border-0 bg-transparent movie-card">
-      <img src="Terror/terror 3.jpg" class="card-img rounded" alt="Silent Hill">
-    </div>
-    <div class="card border-0 bg-transparent movie-card">
-      <img src="Terror/terror 4.jpg" class="card-img rounded" alt="Siniestro">
-    </div>
-    <div class="card border-0 bg-transparent movie-card">
-      <img src="Terror/terror 5.jpg" class="card-img rounded" alt="El orfanato">
-    </div>
-    <div class="card border-0 bg-transparent movie-card">
-      <img src="Terror/IT 2.jpg" class="card-img rounded" alt="It 2">
-    </div>
-    <div class="card border-0 bg-transparent movie-card">
-      <img src="Terror/la monja.jpg" class="card-img rounded" alt="La monja">
-    </div>
-    <div class="card border-0 bg-transparent movie-card">
-      <img src="Terror/chucky.jpg" class="card-img rounded" alt="Chucky">
-    </div>
-  </div>
+          <div class="chat-bubble">
+            Mantené <strong>Shift</strong> + scroll para deslizar las filas.
+          </div>
+        </span>
+      </div>
 
+      <div class="movie-row">
+        <div class="card border-0 bg-transparent movie-card">
+          <img
+            src="Assets/bastardos 1.jpg"
+            class="card-img rounded"
+            alt="Bastardos sin gloria"
+          />
+        </div>
 
+        <div class="card border-0 bg-transparent movie-card">
+          <img
+            src="Categoria Accion/accion 8.jpg"
+            class="card-img rounded"
+            alt="Tomb Raider"
+          />
+        </div>
 
-<script
+        <div class="card border-0 bg-transparent movie-card">
+          <img
+            src="Assets/Batman-910896570-large.jpg"
+            class="card-img rounded"
+            alt="Batman"
+          />
+        </div>
+
+        <div class="card border-0 bg-transparent movie-card">
+          <img
+            src="Categoria Accion/accion 4.jpg"
+            class="card-img rounded"
+            alt="Los Vengadores"
+          />
+        </div>
+
+        <div class="card border-0 bg-transparent movie-card">
+          <img
+            src="Categoria Accion/accion 5.jpg"
+            class="card-img rounded"
+            alt="Thunderbolts"
+          />
+        </div>
+
+        <div class="card border-0 bg-transparent movie-card">
+          <img
+            src="Categoria Accion/accion 6.jpg"
+            class="card-img rounded"
+            alt="Mad Max"
+          />
+        </div>
+
+        <div class="card border-0 bg-transparent movie-card">
+          <img
+            src="Categoria Accion/accion 7.avif"
+            class="card-img rounded"
+            alt="Spenser"
+          />
+        </div>
+
+        <div class="card border-0 bg-transparent movie-card">
+          <img
+            src="Assets/matrix aniversary.jpg"
+            class="card-img rounded"
+            alt="Matrix"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- COMEDIA -->
+    <section class="container my-4">
+      <div class="d-flex align-items-center mb-3 gap-3">
+        <h2 class="titulo-seccion mb-0">Comedia</h2>
+
+        <span class="chat-bubble-wrapper">
+          <button
+            type="button"
+            class="btn btn-sm btn-outline-light rounded-circle"
+          >
+            ?
+          </button>
+
+          <div class="chat-bubble">
+            Mantené <strong>Shift</strong> + scroll para deslizar las filas.
+          </div>
+        </span>
+      </div>
+
+      <div class="movie-row">
+        <div class="card border-0 bg-transparent movie-card">
+          <img
+            src="Comedia/comedia 1.jpg"
+            class="card-img rounded"
+            alt="Proyecto X"
+          />
+        </div>
+
+        <div class="card border-0 bg-transparent movie-card">
+          <img
+            src="Comedia/comedia 2.avif"
+            class="card-img rounded"
+            alt="Big Momma"
+          />
+        </div>
+
+        <div class="card border-0 bg-transparent movie-card">
+          <img
+            src="Comedia/comedia 4.webp"
+            class="card-img rounded"
+            alt="This Is the End"
+          />
+        </div>
+
+        <div class="card border-0 bg-transparent movie-card">
+          <img
+            src="Comedia/comedia 5.webp"
+            class="card-img rounded"
+            alt="Scary Movie"
+          />
+        </div>
+
+        <div class="card border-0 bg-transparent movie-card">
+          <img
+            src="Comedia/COMEDIA 7.png"
+            class="card-img rounded"
+            alt="The Big Bang Theory"
+          />
+        </div>
+
+        <div class="card border-0 bg-transparent movie-card">
+          <img
+            src="Comedia/comedia 14.jpg"
+            class="card-img rounded"
+            alt="The Ridiculous 6"
+          />
+        </div>
+
+        <div class="card border-0 bg-transparent movie-card">
+          <img
+            src="Comedia/comedia 15.webp"
+            class="card-img rounded"
+            alt="Scooby Doo"
+          />
+        </div>
+
+        <div class="card border-0 bg-transparent movie-card">
+          <img
+            src="Comedia/comedia 12.jpg"
+            class="card-img rounded"
+            alt="American Pie"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- CIENCIA FICCION -->
+    <section class="container my-4">
+      <div class="d-flex align-items-center mb-3 gap-3">
+        <h2 class="titulo-seccion mb-0">Ciencia Ficcion</h2>
+
+        <span class="chat-bubble-wrapper">
+          <button
+            type="button"
+            class="btn btn-sm btn-outline-light rounded-circle"
+          >
+            ?
+          </button>
+
+          <div class="chat-bubble">
+            Mantené <strong>Shift</strong> + scroll para deslizar las filas.
+          </div>
+        </span>
+      </div>
+
+      <div class="movie-row">
+        <div class="card border-0 bg-transparent movie-card">
+          <img
+            src="ciencia ficcion/cf1.jpg"
+            class="card-img rounded"
+            alt="Interestelar"
+          />
+        </div>
+
+        <div class="card border-0 bg-transparent movie-card">
+          <img
+            src="ciencia ficcion/cf2.jpg"
+            class="card-img rounded"
+            alt="Volver al Futuro"
+          />
+        </div>
+
+        <div class="card border-0 bg-transparent movie-card">
+          <img
+            src="ciencia ficcion/cf3.avif"
+            class="card-img rounded"
+            alt="Star Wars"
+          />
+        </div>
+
+        <div class="card border-0 bg-transparent movie-card">
+          <img
+            src="ciencia ficcion/cf4.jpg"
+            class="card-img rounded"
+            alt="E.T."
+          />
+        </div>
+
+        <div class="card border-0 bg-transparent movie-card">
+          <img
+            src="ciencia ficcion/cf5.jpg"
+            class="card-img rounded"
+            alt="Limitless"
+          />
+        </div>
+
+        <div class="card border-0 bg-transparent movie-card">
+          <img
+            src="ciencia ficcion/cf6.jpg"
+            class="card-img rounded"
+            alt="Jurassic World Renace"
+          />
+        </div>
+
+        <div class="card border-0 bg-transparent movie-card">
+          <img
+            src="ciencia ficcion/cf7.jpg"
+            class="card-img rounded"
+            alt="Terminator"
+          />
+        </div>
+
+        <div class="card border-0 bg-transparent movie-card">
+          <img
+            src="ciencia ficcion/cf8.jpg"
+            class="card-img rounded"
+            alt="Avatar"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- TERROR -->
+    <section class="container my-4">
+      <div class="d-flex align-items-center mb-3 gap-3">
+        <h2 class="titulo-seccion mb-0">Terror</h2>
+
+        <span class="chat-bubble-wrapper">
+          <button
+            type="button"
+            class="btn btn-sm btn-outline-light rounded-circle"
+          >
+            ?
+          </button>
+
+          <div class="chat-bubble">
+            Mantené <strong>Shift</strong> + scroll para deslizar las filas.
+          </div>
+        </span>
+      </div>
+
+      <div class="movie-row">
+        <div class="card border-0 bg-transparent movie-card">
+          <img
+            src="Terror/terror 1.webp"
+            class="card-img rounded"
+            alt="Scream"
+          />
+        </div>
+
+        <div class="card border-0 bg-transparent movie-card">
+          <img
+            src="Terror/terror 2.webp"
+            class="card-img rounded"
+            alt="El Conjuro"
+          />
+        </div>
+
+        <div class="card border-0 bg-transparent movie-card">
+          <img
+            src="Terror/terror 3.jpg"
+            class="card-img rounded"
+            alt="Silent Hill"
+          />
+        </div>
+
+        <div class="card border-0 bg-transparent movie-card">
+          <img
+            src="Terror/terror 4.jpg"
+            class="card-img rounded"
+            alt="Siniestro"
+          />
+        </div>
+
+        <div class="card border-0 bg-transparent movie-card">
+          <img
+            src="Terror/terror 5.jpg"
+            class="card-img rounded"
+            alt="El Orfanato"
+          />
+        </div>
+
+        <div class="card border-0 bg-transparent movie-card">
+          <img src="Terror/IT 2.jpg" class="card-img rounded" alt="It 2" />
+        </div>
+
+        <div class="card border-0 bg-transparent movie-card">
+          <img
+            src="Terror/la monja.jpg"
+            class="card-img rounded"
+            alt="La Monja"
+          />
+        </div>
+
+        <div class="card border-0 bg-transparent movie-card">
+          <img src="Terror/chucky.jpg" class="card-img rounded" alt="Chucky" />
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <p>© 2026 Notflix</p>
+
+      <div>
+        <a href="#">Inicio</a>
+        <a href="#">Películas</a>
+        <a href="#">Series</a>
+        <a href="#">Contacto</a>
+      </div>
+    </footer>
+
+    <!-- BOOTSTRAP JS -->
+    <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"></script>

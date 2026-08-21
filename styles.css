@@ -130,3 +130,20 @@ body {
 .banner-suscripcion .btn-light:hover {
   transform: scale(1.05);
 }
+
+.footer {
+  background: #0d0d0d;
+  color: #777;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer a {
+  color: #777;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: white;
+}
