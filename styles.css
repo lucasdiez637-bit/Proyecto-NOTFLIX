@@ -75,25 +75,10 @@ body {
 }
 
 .movie-card img {
-  width: 220px;
-  height: 220px;
-  object-fit: cover; 
-  display: block;
+  width: clamp(130px, 18vw, 240px);
+  height: clamp(130px, 18vw, 240px);
   object-fit: cover;
-}
-
-.movie-row .movie-card2 {
-  flex: 0 0 auto;
-  min-width: 0; 
-  scroll-snap-align: start;
-}
-
-.movie-card2 img {
-  width: 280px;
-  height: 340px;
-  object-fit: cover; 
   display: block;
-  object-fit: cover;
 }
 
 .movie-row::-webkit-scrollbar {
