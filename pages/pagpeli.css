@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+  min-height: 100%;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+body {
+  background: linear-gradient(-45deg, #0d0d0d, #30253d, #14131b, #0d0d0d);
+  background-size: 400% 400%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  animation: gradientMove 15s ease infinite;
+  overflow-x: hidden;
+}
+
+.ratio.ratio-16x9 {
+  max-width: 100%;
+}
+
+.movie-row {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  padding: 4px;
+  scrollbar-width: thin; 
+  scrollbar-color: #6b21a8 transparent;
+}
+
+.movie-row .movie-card {
+  flex: 0 0 auto;
+  min-width: 0; 
+  scroll-snap-align: start;
+}
+
+.movie-card img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover; 
+  display: block;
+  object-fit: cover;
+}
+
+.movie-row::-webkit-scrollbar {
+  height: 8px;
+}
+
+.movie-row::-webkit-scrollbar-thumb {
+  background-color: #6b21a8;
+  border-radius: 4px;
+}
+
+.chat-bubble-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.chat-bubble {
+  position: absolute;
+  top: 120%;
+  left: 0;
+  background: #1f1f1f;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 12px;
+  width: 200px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease;
+  z-index: 10;
+}
+
+.chat-bubble-wrapper:hover .chat-bubble,
+.chat-bubble-wrapper:focus-within .chat-bubble {
+  opacity: 1;
+  visibility: visible;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@media (max-width: 576px) {
+  .ratio.ratio-16x9 {
+    max-width: 85%;
+    margin: 0 auto;
+  }
+}
