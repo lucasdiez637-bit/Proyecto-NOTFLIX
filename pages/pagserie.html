@@ -1,103 +1,215 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bootstrap demo</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+  <title>Rick y Morty</title>
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+    crossorigin="anonymous"
+  >
+
   <link rel="stylesheet" href="./pagserie.css">
 </head>
 
 <body>
-  <div class="row">
-    <div class="col-12 col-lg-6">
-      <div class="ratio ratio-16x9 mb-3">
-        <iframe src="https://www.youtube.com/embed/ID_DEL_VIDEO?rel=0" title="Trailer de la serie" allowfullscreen>
-        </iframe>
-      </div>
 
-      <h4 class="text-white mt-4 mb-3">Capítulos</h4>
+  <main class="container-fluid py-4">
 
-      <div class="accordion" id="accordionCapitulos">
+    <div class="row g-4">
 
-        <div class="accordion-item bg-dark">
-          <h2 class="accordion-header">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#temporada1">
-              Temporada 1
-            </button>
-          </h2>
-          <div id="temporada1" class="accordion-collapse collapse show" data-bs-parent="#accordionCapitulos">
-            <div class="accordion-body">
+      <div class="col-12 col-lg-7">
 
-              <div class="d-flex align-items-center gap-3 border-bottom border-secondary py-2">
-                <img src="ruta/cap1.jpg" width="100" class="rounded" alt="Piloto">
-                <div>
-                  <p class="mb-0 fw-bold text-white">1. Piloto</p>
-                  <p class="mb-0 text-secondary small">23 min</p>
-                </div>
-              </div>
-
-              <div class="d-flex align-items-center gap-3 border-bottom border-secondary py-2">
-                <img src="ruta/cap2.jpg" width="100" class="rounded" alt="Capítulo 2">
-                <div>
-                  <p class="mb-0 fw-bold text-white">2. Lawnmower Dog</p>
-                  <p class="mb-0 text-secondary small">23 min</p>
-                </div>
-              </div>
-
-            </div>
-          </div>
+        <div class="ratio ratio-16x9 video-container">
+          <iframe
+            src="https://www.youtube.com/embed/URB8StsqqVU"
+            title="Trailer Rick y Morty"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
         </div>
 
-        <div class="accordion-item bg-dark">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-              data-bs-target="#temporada2">
-              Temporada 2
-            </button>
-          </h2>
-          <div id="temporada2" class="accordion-collapse collapse" data-bs-parent="#accordionCapitulos">
-            <div class="accordion-body">
+        <h4 class="text-white mt-4 mb-3">
+          Capítulos
+        </h4>
 
-              <div class="d-flex align-items-center gap-3 border-bottom border-secondary py-2">
-                <img src="ruta/cap1.jpg" width="100" class="rounded" alt="Capítulo 1">
-                <div>
-                  <p class="mb-0 fw-bold text-white">1. A Rickle in Time</p>
-                  <p class="mb-0 text-secondary small">23 min</p>
+        <div class="accordion" id="accordionCapitulos">
+
+          <div class="accordion-item">
+
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#temporada1"
+                aria-expanded="true"
+                aria-controls="temporada1">
+                Temporada 1
+              </button>
+            </h2>
+
+            <div
+              id="temporada1"
+              class="accordion-collapse collapse show"
+              data-bs-parent="#accordionCapitulos">
+
+              <div class="accordion-body">
+
+                <div class="episode">
+              
+
+                  <div class="episode-info">
+                    <p class="episode-title">
+                      1. Piloto
+                    </p>
+
+                    <p class="episode-duration">
+                      23 min
+                    </p>
+                  </div>
                 </div>
-              </div>
 
+                <div class="episode">
+                  
+
+                  <div class="episode-info">
+                    <p class="episode-title">
+                      2. Lawnmower Dog
+                    </p>
+
+                    <p class="episode-duration">
+                      23 min
+                    </p>
+                  </div>
+                </div>
+
+              </div>
             </div>
           </div>
+
+
+          <div class="accordion-item">
+
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#temporada2"
+                aria-expanded="false"
+                aria-controls="temporada2">
+                Temporada 2
+              </button>
+            </h2>
+
+            <div
+              id="temporada2"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionCapitulos">
+
+              <div class="accordion-body">
+
+                <div class="episode">
+
+                  <div class="episode-info">
+                    <p class="episode-title">
+                      1. A Rickle in Time
+                    </p>
+
+                    <p class="episode-duration">
+                      23 min
+                    </p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
         </div>
 
       </div>
 
 
-      <div class="col-12 col-lg-6 text-white">
-        <h2 class="fw-bold">Rick y Morty</h2>
-        <p>Rick y Morty es una serie de televisión estadounidense de animación para adultos creada por Justin Roiland y Dan Harmon en 2013 para Adult Swim, también se emitió en Cartoon Network. La serie sigue las desventuras de un científico, Rick Sánchez, y su fácilmente influenciable nieto, Morty, quienes pasan el tiempo entre la vida doméstica y los viajes espaciales e intergalácticos.</p>
-        <p><strong>Elenco:</strong></p>
-        <ul>
-          <li>Justin Roiland como Rick Sánchez.</li>
-          <li>Justin Roiland como Morty Smith.</li>
-          <li>Chris Parnell como Jerry Smit.h</li>
-          <li>Spencer Grammer como Summer Smith.</li>
-        </ul>
+      <div class="col-12 col-lg-5 text-white">
+
+        <div class="serie-info">
+
+          <h2 class="fw-bold">
+            Rick y Morty
+          </h2>
+
+          <p>
+            Rick y Morty es una serie de televisión estadounidense
+            de animación para adultos creada por Justin Roiland y
+            Dan Harmon en 2013 para Adult Swim.
+          </p>
+
+          <p>
+            La serie sigue las desventuras de un científico,
+            Rick Sánchez, y su fácilmente influenciable nieto,
+            Morty, quienes pasan el tiempo entre la vida doméstica
+            y los viajes espaciales e intergalácticos.
+          </p>
+
+          <p>
+            <strong>Elenco:</strong>
+          </p>
+
+          <ul>
+            <li>Justin Roiland como Rick Sánchez.</li>
+            <li>Justin Roiland como Morty Smith.</li>
+            <li>Chris Parnell como Jerry Smith.</li>
+            <li>Spencer Grammer como Summer Smith.</li>
+          </ul>
+
+        </div>
+
       </div>
+
     </div>
 
-    <section class="container my-4">
-      <h2 class="titulo-seccion">También te puede interesar</h2>
-      <div class="movie-row">
-        
-      </div>
-    </section>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-      crossorigin="anonymous"></script>
-</body>
 
+    <div class="container my-4 text-white ">
+    <h3 class="titulo-seccion">También te puede interesar</h3>
+    <div class="movie-row">
+      <div class="card border-0 bg-transparent movie-card">
+        <img src="../Assets/war machine.jpg" class="card-img rounded" alt="Película 2">
+      </div>
+      <div class="card border-0 bg-transparent movie-card">
+        <img src="../Assets/office romance.jpg" class="card-img rounded" alt="Película 1">
+      </div>
+      <div class="card border-0 bg-transparent movie-card">
+        <img src="../Assets/on my block 1.jpg" class="card-img rounded" alt="Película 1">
+      </div>
+      <div class="card border-0 bg-transparent movie-card">
+        <img src="../Assets/bastardos 1.jpg" class="card-img rounded" alt="Película 1">
+      </div>
+      <div class="card border-0 bg-transparent movie-card">
+        <img src="../Assets/recomendados 1.jpg" class="card-img rounded" alt="Película 1">
+      </div>
+      <div class="card border-0 bg-transparent movie-card">
+        <img src="../Assets/matrix aniversary.jpg" class="card-img rounded" alt="Película 1">
+      </div>
+      <div class="card border-0 bg-transparent movie-card">
+        <img src="../Assets/ricardo y mortadela.jpg" class="card-img rounded" alt="Película 1">
+      </div>
+    </div>
+  </div>
+
+  </main>
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous">
+  </script>
+
+</body>
 </html>
