@@ -1,0 +1,26 @@
+
+
+.contenedor {
+   display: flex;
+   justify-content: center;
+}
+.error404 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   justify-content:center;
+   text-align:center;
+   color:baseline;
+}
+    
+.error404 button {
+    margin-top: 20px;
+}
+.boton-centro{
+   position: absolute;
+}
+.padre{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
